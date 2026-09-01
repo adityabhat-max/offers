@@ -1,0 +1,7 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/api/board" },
+    { "source": "/login", "destination": "/api/login" },
+    { "source": "/logout", "destination": "/api/logout" }
+  ]
+}

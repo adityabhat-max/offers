@@ -1,0 +1,17 @@
+{
+  "_note": "PLACEHOLDER DATA — copied from the real 'August Offers' Google Sheet so the template could be built and previewed. Replace this file with real September data once the September sheet is shared and accessible (see README.md).",
+  "offers": [
+    { "name": "Dysport / Botox", "type": "Injectable", "price": 300 },
+    { "name": "Excobio Face", "type": "Injectable", "price": 20000 },
+    { "name": "Exosome - Hair", "type": "Injectable", "price": 13999 },
+    { "name": "Profhilo", "type": "Injectable", "price": 26000 },
+    { "name": "Sculptra - Filler", "type": "Injectable", "price": 35999 },
+    { "name": "Msculpt Neo", "type": "10 sessions", "price": 110000 },
+    { "name": "Coolsculpt", "type": "Advantage+", "price": 34999 },
+    { "name": "Laser 1 Year Titanium", "type": "", "price": 42000 },
+    { "name": "Hydra Signature", "type": "", "price": 4999 },
+    { "name": "PRP GFC", "type": "4 Sessions", "price": 28000 },
+    { "name": "Morpheus-8", "type": "4 Sessions", "price": 39999 },
+    { "name": "Derma Pen 4", "type": "4 Sessions", "price": 39999 }
+  ]
+}

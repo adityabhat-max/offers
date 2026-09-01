@@ -45,15 +45,9 @@ Open `http://localhost:3000`.
 
 ## Sheet schema
 
-One row per offer/treatment. Matches the format already used in the existing monthly sheets:
+One row per offer, two columns — **Offer | Details**. `Details` is free text: sometimes a price (`₹300`), sometimes a pricing rule (`Minimum ₹20,000`, `₹12,000 per session`), sometimes an approval note (`Approval required; reach out for approval`). Because it isn't always a clean number, the board doesn't try to compute a price range or total — it just displays each row's detail text as-is next to its name.
 
-| Column | Example |
-|---|---|
-| Treatment / Service Name | `Sculptra - Filler` |
-| Sessions / Type (optional, often blank) | `10 sessions`, `Injectable` |
-| Selling Price | `35999` |
-
-If a future sheet adds more columns (category, MRP for a discount comparison, validity dates), extend `data/<YYYY-MM>.json`, the offer object shape, and `lib/render.js`'s card markup to surface them rather than dropping them.
+This has varied between months (August's sheet used a different 3-column Treatment/Sessions/Price format) — if a future sheet changes shape again, update `data/<YYYY-MM>.json`, the offer object shape, and `lib/render.js`'s card markup to match rather than forcing it into the old shape.
 
 ## Data file format
 
@@ -62,15 +56,14 @@ If a future sheet adds more columns (category, MRP for a discount comparison, va
 ```json
 {
   "offers": [
-    { "name": "Sculptra - Filler", "type": "Injectable", "price": 35999 },
-    { "name": "Msculpt Neo", "type": "10 sessions", "price": 110000 }
+    { "name": "Botox", "detail": "₹300" },
+    { "name": "Sculptra", "detail": "Minimum selling price: ₹40,000" },
+    { "name": "Rejuran", "detail": "Approval required; reach out for approval" }
   ]
 }
 ```
 
-`type` may be an empty string when the sheet doesn't specify sessions/type for that row.
-
-> `data/2026-09.json` currently holds **placeholder data** copied from the real "August Offers" sheet, just to preview the design. Replace it with the real September data once that sheet is accessible.
+> `data/2026-09.json` now holds the real September data pulled from the "September - Offers" Google Sheet (41 rows).
 
 ## Discount approval matrix
 

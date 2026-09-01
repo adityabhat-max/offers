@@ -1,6 +1,5 @@
 const fs = require("fs");
 const path = require("path");
-const { isAuthenticated } = require("../lib/auth");
 const { renderBoardPage } = require("../lib/render");
 
 function resolveMonthKey() {
@@ -12,11 +11,6 @@ function resolveMonthKey() {
 }
 
 module.exports = (req, res) => {
-  if (!isAuthenticated(req)) {
-    res.setHeader("Cache-Control", "no-store");
-    return res.redirect(302, "/login");
-  }
-
   const monthKey = resolveMonthKey();
   const dataPath = path.join(process.cwd(), "data", `${monthKey}.json`);
 
@@ -28,6 +22,5 @@ module.exports = (req, res) => {
 
   const html = renderBoardPage(monthKey, offers);
   res.setHeader("Content-Type", "text/html; charset=utf-8");
-  res.setHeader("Cache-Control", "no-store");
   res.status(200).send(html);
 };

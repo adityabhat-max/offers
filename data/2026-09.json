@@ -1,9 +1,9 @@
 {
   "offers": [
-    { "name": "42K – 1 Year Platinium / Titanium", "detail": "Can be approved at your end; no need to reach out for approval", "subCategory": "LHR" },
-    { "name": "65K – 2 Year Platinium / Titanium", "detail": "Can be approved at your end; no need to reach out for approval", "subCategory": "LHR" },
-    { "name": "95K – Lifetime Platinum", "detail": "Can be approved at your end; no need to reach out for approval", "subCategory": "LHR" },
-    { "name": "1.10 Lakh – Lifetime Titanium", "detail": "Can be approved at your end; no need to reach out for approval", "subCategory": "LHR" },
+    { "name": "1 Year Platinium", "detail": "Can be approved at your end; no need to reach out for approval", "subCategory": "LHR", "price": 42000 },
+    { "name": "2 Year Platinium", "detail": "Can be approved at your end; no need to reach out for approval", "subCategory": "LHR", "price": 65000 },
+    { "name": "Lifetime Platinum", "detail": "Can be approved at your end; no need to reach out for approval", "subCategory": "LHR", "price": 95000 },
+    { "name": "Lifetime Titanium", "detail": "Can be approved at your end; no need to reach out for approval", "subCategory": "LHR", "price": 110000 },
     { "name": "Botox", "detail": "₹300" },
     { "name": "Filler – 1 ml", "detail": "₹21,000" },
     { "name": "NCTF", "detail": "₹10,000" },
